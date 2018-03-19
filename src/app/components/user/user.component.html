@@ -1,0 +1,39 @@
+<h1>Welcome {{name}}</h1>
+<ul><li *ngFor='let hobby of hobbies;let i=index'>{{i+1}}.{{hobby}}</li></ul>
+<form (submit)='addHobby(hobby.value)'>
+
+</form>
+<button (click)="onClicked()">click me </button>
+
+<button (click)="toggleButton()">Edit User</button>
+<div *ngIf=isEdit>
+<form (submit)='addHobby(hobby.value)'>
+<div>
+  <label for="name">Name</label>
+  <input type="text" [(ngModel)]="name" name="name">
+</div>
+<div>
+    <label for="age">Age</label>
+    <input type="text" [(ngModel)]="age" name="age">
+  </div>
+  <div>
+      <label for="name">Name</label>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="name" name="name">
+      </div>
+<div>
+<label for="hobby">Hobby</label>
+<input type="text" #hobby>
+</div>
+
+
+
+</form>
+</div>
+<ul><li *ngFor='let hobby of hobbies;let i=index'>{{i+1}}.{{hobby}}</li></ul>
+<h1>Posts</h1>
+
+<div *ngFor='let post of posts'><h4>{{post.id}}.{{post.title}}</h4></div>
